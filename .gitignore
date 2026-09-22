@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+# Editor and Workspaces
+*.code-workspace
+.vscode/
+.idea/
+
+# Vercel & Node
+.vercel
+node_modules/
+
+# Python cache & temporary files
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.env.local

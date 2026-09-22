@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Coffee — Brewed to Perfection</title>
+
+  <!-- Google Fonts & Icons from provided file -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "outline-variant": "#d3c3bd",
+            "error": "#ba1a1a",
+            "tertiary-fixed-dim": "#e9c349",
+            "surface-container-lowest": "#ffffff",
+            "surface-container": "#f0eee8",
+            "on-primary-container": "#a88779",
+            "surface-tint": "#75584c",
+            "secondary": "#7a582f",
+            "surface": "#fcf9f3",
+            "on-secondary-fixed-variant": "#5f401a",
+            "on-secondary-fixed": "#2b1700",
+            "on-tertiary": "#ffffff",
+            "on-primary": "#ffffff",
+            "secondary-container": "#fecf9d",
+            "error-container": "#ffdad6",
+            "primary": "#200e06",
+            "tertiary-fixed": "#ffe088",
+            "secondary-fixed": "#ffddba",
+            "on-secondary": "#ffffff",
+            "on-surface-variant": "#504440",
+            "on-error": "#ffffff",
+            "surface-bright": "#fcf9f3",
+            "on-primary-fixed-variant": "#5b4135",
+            "on-primary-fixed": "#2b160d",
+            "on-error-container": "#93000a",
+            "on-tertiary-fixed": "#241a00",
+            "primary-fixed-dim": "#e4bfaf",
+            "surface-container-high": "#ebe8e2",
+            "on-tertiary-container": "#4f3e00",
+            "primary-container": "#382218",
+            "secondary-fixed-dim": "#ecbe8e",
+            "surface-container-highest": "#e5e2dc",
+            "inverse-surface": "#31312d",
+            "tertiary": "#735c00",
+            "inverse-on-surface": "#f3f0ea",
+            "on-tertiary-fixed-variant": "#574500",
+            "tertiary-container": "#cca830",
+            "surface-dim": "#dcdad4",
+            "outline": "#82746f",
+            "primary-fixed": "#ffdbcc",
+            "inverse-primary": "#e4bfaf",
+            "on-surface": "#1c1c18",
+            "surface-container-low": "#f6f3ed",
+            "on-background": "#1c1c18",
+            "on-secondary-container": "#79562e",
+            "background": "#fcf9f3",
+            "surface-variant": "#e5e2dc"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-xs": "0.25rem",
+            "space-lg": "1.5rem",
+            "space-md": "1rem",
+            "space-xl": "2.5rem",
+            "margin": "3rem",
+            "gutter": "1.5rem",
+            "gutter-sm": "1rem",
+            "margin-mobile": "1.25rem",
+            "space-sm": "0.5rem"
+          },
+          "fontFamily": {
+            "headline-lg": ["Playfair Display"],
+            "title-md": ["DM Sans"],
+            "headline-xl-mobile": ["Playfair Display"],
+            "label-lg": ["DM Sans"],
+            "headline-xl": ["Playfair Display"],
+            "body-md": ["DM Sans"],
+            "body-sm": ["DM Sans"],
+            "headline-sm": ["Playfair Display"],
+            "headline-md": ["Playfair Display"],
+            "title-lg": ["DM Sans"],
+            "label-sm": ["DM Sans"],
+            "label-md": ["DM Sans"],
+            "headline-lg-mobile": ["Playfair Display"],
+            "body-lg": ["DM Sans"]
+          },
+          "fontSize": {
+            "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.015em", "fontWeight": "500"}],
+            "title-md": ["18px", {"lineHeight": "26px", "fontWeight": "500"}],
+            "headline-xl-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+            "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.04em", "fontWeight": "600"}],
+            "headline-xl": ["56px", {"lineHeight": "68px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+            "body-md": ["15px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "body-sm": ["13px", {"lineHeight": "20px", "fontWeight": "400"}],
+            "headline-sm": ["22px", {"lineHeight": "30px", "fontWeight": "600"}],
+            "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "500"}],
+            "title-lg": ["20px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+            "label-sm": ["11px", {"lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700"}],
+            "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "600"}],
+            "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+            "body-lg": ["17px", {"lineHeight": "26px", "fontWeight": "400"}]
+          }
+        }
+      }
+    };
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+
+  <!-- ==========================================================================
+       HERO SECTION ON SCROLL ANIMATION (From Reference Image)
+       (Barista background visual removed -> Pinned 300-frame coffee scroll animation in place)
+       ========================================================================== -->
+  <div id="animation-pin-section" class="relative w-full h-[400vh] bg-black">
+    <!-- Pinned Sticky Viewport -->
+    <div id="hero" class="sticky top-0 w-full h-screen overflow-hidden flex flex-col justify-between bg-black">
+      
+      <!-- Fixed Fullscreen Canvas Background for the 300 frames -->
+      <div class="absolute inset-0 z-0 flex items-center justify-center">
+        <canvas id="scroll-canvas" class="w-full h-full object-cover block"></canvas>
+      </div>
+
+      <!-- Top Navigation Bar from Reference Image -->
+      <header class="relative z-20 w-full bg-[#f1e7d8]/95 backdrop-blur-md shadow-sm border-b border-[#dfd2c0]">
+        <div class="h-16 max-w-7xl mx-auto px-gutter-sm lg:px-margin flex items-center justify-between">
+          
+          <!-- Logo / Coffee Home -->
+          <a href="#hero" class="nav-brand flex items-center gap-2 text-decoration-none group">
+            <span class="font-headline-md text-3xl font-bold tracking-tight text-[#200e06] group-hover:text-[#7a582f] transition-colors">Coffee</span>
+          </a>
+
+          <!-- Desktop Nav Links -->
+          <nav class="hidden md:flex items-center gap-6">
+            <a href="#hero" class="nav-item text-sm font-semibold text-[#200e06] hover:text-[#7a582f] transition-colors">Home</a>
+            <a href="#menu" class="nav-item text-sm font-medium text-[#504440] hover:text-[#200e06] transition-colors">Menu</a>
+            <a href="#roasts" class="nav-item text-sm font-medium text-[#504440] hover:text-[#200e06] transition-colors">Our Story</a>
+            <a href="#menu" class="nav-item text-sm font-medium text-[#504440] hover:text-[#200e06] transition-colors">Specialty</a>
+            <a href="#locations" class="nav-item text-sm font-medium text-[#504440] hover:text-[#200e06] transition-colors">Contact</a>
+            <a href="#pillars" class="nav-item text-sm font-medium text-[#504440] hover:text-[#200e06] transition-colors">Brands</a>
+          </nav>
+
+          <!-- Search & Cart Icons + Hamburger for Mobile -->
+          <div class="flex items-center gap-3 text-[#200e06]">
+            <!-- Search Button -->
+            <button id="search-btn" class="p-1.5 rounded-full hover:bg-[#e4d6c3] transition-colors cursor-pointer" aria-label="Search menu">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+
+            <!-- Cart Button -->
+            <button id="cart-btn" class="relative p-1.5 rounded-full hover:bg-[#e4d6c3] transition-colors cursor-pointer" aria-label="View shopping bag">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+              </svg>
+              <!-- Cart Badge -->
+              <span id="cart-badge" class="absolute -top-1 -right-1 w-4 h-4 bg-secondary text-white text-[10px] font-bold rounded-full items-center justify-center hidden">0</span>
+            </button>
+
+            <!-- Mobile Hamburger Button -->
+            <button id="mobile-menu-btn" class="md:hidden p-1.5 rounded-full hover:bg-[#e4d6c3] transition-colors cursor-pointer" aria-label="Open navigation menu">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+
+        </div>
+      </header>
+
+      <!-- Hero Content overlay directly on the scroll animation -->
+      <div class="relative z-10 flex-1 flex items-center max-w-7xl mx-auto px-gutter-sm lg:px-margin w-full pointer-events-none">
+        <div class="max-w-xl flex flex-col gap-4 pointer-events-auto">
+          <h1 class="font-headline-xl text-5xl md:text-6xl lg:text-7xl font-semibold text-white tracking-tight leading-[1.08] drop-shadow-[0_4px_16px_rgba(0,0,0,0.85)]">
+            Brewed to<br>Perfection,
+          </h1>
+          <p class="font-body-lg text-lg text-white/95 max-w-lg leading-relaxed drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
+            Artisanal single-origin beans meticulously calibrated, slow-roasted, and extracted to unveil dense crema and exquisite floral honey notes.
+          </p>
+          <div class="pt-2">
+            <a href="#menu" class="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-[#c58b54] hover:bg-[#b07742] text-[#200e06] font-bold text-sm tracking-wider uppercase transition-all duration-300 shadow-[0_4px_20px_rgba(197,139,84,0.4)] transform hover:-translate-y-0.5 cursor-pointer">
+              ORDER COFFEE
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Minimal Dissolving Preloader -->
+      <div id="loader-overlay" class="loader-overlay">
+        <div class="loader-bar-track">
+          <div id="loader-bar" class="loader-bar"></div>
+        </div>
+        <div id="loader-text" class="loader-text">Loading experience 0%</div>
+      </div>
+
+      <!-- Functional scroll indicator & prompt -->
+      <a href="#pillars" id="scroll-prompt" class="relative z-20 pb-6 flex flex-col items-center gap-1.5 cursor-pointer text-white/80 hover:text-white transition-colors duration-300 pointer-events-auto group" aria-label="Scroll to explore">
+        <span class="text-xs uppercase tracking-widest font-semibold drop-shadow group-hover:tracking-wider transition-all">Scroll to animate &amp; explore</span>
+        <span class="material-symbols-outlined text-[20px] animate-bounce drop-shadow">expand_more</span>
+      </a>
+
+    </div>
+  </div>
+
+  <!-- Mobile Menu Drawer & Backdrop -->
+  <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 hidden transition-opacity duration-300"></div>
+  <div id="mobile-menu-drawer" class="fixed top-0 right-0 w-4/5 max-w-sm h-full bg-[#fcf9f3] z-50 shadow-2xl p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out">
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-[#e5e2dc]">
+        <div class="flex items-center gap-2">
+          <span class="text-2xl">☕</span>
+          <span class="font-headline-md text-2xl font-bold text-primary">Coffee</span>
+        </div>
+        <button id="mobile-menu-close" class="p-2 rounded-full hover:bg-surface-container text-primary cursor-pointer" aria-label="Close menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-1 mt-4">
+        <a href="#hero" class="mobile-nav-link text-base font-semibold text-primary hover:text-secondary py-2.5 border-b border-surface-container-high transition-colors">Home</a>
+        <a href="#menu" class="mobile-nav-link text-base font-medium text-on-surface-variant hover:text-primary py-2.5 border-b border-surface-container-high transition-colors">Menu</a>
+        <a href="#roasts" class="mobile-nav-link text-base font-medium text-on-surface-variant hover:text-primary py-2.5 border-b border-surface-container-high transition-colors">Our Story</a>
+        <a href="#menu" class="mobile-nav-link text-base font-medium text-on-surface-variant hover:text-primary py-2.5 border-b border-surface-container-high transition-colors">Specialty</a>
+        <a href="#locations" class="mobile-nav-link text-base font-medium text-on-surface-variant hover:text-primary py-2.5 border-b border-surface-container-high transition-colors">Contact</a>
+        <a href="#pillars" class="mobile-nav-link text-base font-medium text-on-surface-variant hover:text-primary py-2.5 border-b border-surface-container-high transition-colors">Brands</a>
+      </nav>
+    </div>
+    <div class="flex flex-col gap-2.5 pt-4 border-t border-[#e5e2dc]">
+      <button data-action="reserve-table" class="w-full py-2.5 rounded-full bg-surface-container-high text-primary font-semibold text-sm hover:bg-surface-container-highest transition-colors cursor-pointer">
+        Reserve a Table
+      </button>
+      <a href="#menu" class="mobile-nav-link w-full py-2.5 rounded-full bg-primary text-on-primary text-center font-semibold text-sm hover:bg-primary-container transition-colors shadow-md">
+        Order Online
+      </a>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       REMAINING SECTIONS (Positioned below the scroll animation)
+       ========================================================================== -->
+  <main class="w-full bg-surface relative z-10">
+    <div class="flex flex-col w-full">
+      <div class="relative w-full overflow-hidden">
+
+        <!-- Experience Pillars (4-Pillar Grid) -->
+        <section class="w-full bg-surface-container-low py-space-xl" id="pillars">
+          <div class="max-w-7xl mx-auto px-gutter-sm lg:px-margin">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+              <!-- Pillar 1 -->
+              <div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary mb-space-xs">
+                  <span class="material-symbols-outlined text-[24px]">grain</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary">Micro-Lot Roasting</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Sourced ethically from independent smallholder farmers across 8 origin countries, highlighting unique micro-climates.
+                </p>
+                <span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mt-auto">Direct Farm Partnership</span>
+              </div>
+              <!-- Pillar 2 -->
+              <div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary mb-space-xs">
+                  <span class="material-symbols-outlined text-[24px]">tune</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary">Artisanal Extraction</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Slayer espresso machines calibrated dial-by-dial every single morning with 0.1g gravimetric precision.
+                </p>
+                <span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mt-auto">Dialed Daily</span>
+              </div>
+              <!-- Pillar 3 -->
+              <div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary mb-space-xs">
+                  <span class="material-symbols-outlined text-[24px]">bakery_dining</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary">Daily House Bakery</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Laminated French viennoiserie, cardamom brioche, and country sourdough baked on-site fresh every morning at 5:00 AM.
+                </p>
+                <span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mt-auto">Organic Stoneground</span>
+              </div>
+              <!-- Pillar 4 -->
+              <div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm hover:shadow-md transition-shadow">
+                <div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary mb-space-xs">
+                  <span class="material-symbols-outlined text-[24px]">spa</span>
+                </div>
+                <h3 class="font-headline-sm text-headline-sm text-primary">Community Sanctuary</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  A serene haven dedicated to acoustic calm, natural light, slow mornings, and unhurried conversation.
+                </p>
+                <span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mt-auto">Warm Minimalist Space</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Curated Seasonal Menu Preview Section -->
+        <section class="max-w-7xl mx-auto px-gutter-sm lg:px-margin py-space-xl" id="menu">
+          <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-xl">
+            <div>
+              <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary">Artisanal Offerings</span>
+              <h2 class="font-headline-lg text-headline-lg text-primary mt-space-xs">Curated Seasonal Menu</h2>
+              <p class="font-body-md text-body-md text-on-surface-variant max-w-lg mt-space-xs">
+                Hand-pulled single origin shots, slow cold drips, and freshly baked accompaniments crafted for mindful sipping.
+              </p>
+            </div>
+            <!-- Category Filter Pills -->
+            <div class="flex flex-wrap gap-space-xs" id="menu-tabs">
+              <button class="menu-tab-btn active px-space-md py-space-xs rounded-full bg-primary text-on-primary font-label-md text-label-md transition-all shadow-sm cursor-pointer" data-category="all">All Favorites</button>
+              <button class="menu-tab-btn px-space-md py-space-xs rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all cursor-pointer" data-category="espresso">Espresso &amp; Filter</button>
+              <button class="menu-tab-btn px-space-md py-space-xs rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all cursor-pointer" data-category="cold">Cold Brews</button>
+              <button class="menu-tab-btn px-space-md py-space-xs rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md transition-all cursor-pointer" data-category="pastry">Bakery &amp; Kitchen</button>
+            </div>
+          </div>
+          <!-- Menu Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg" id="menu-grid">
+            <!-- Item 1 -->
+            <div class="menu-item p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between group shadow-sm hover:shadow-md cursor-pointer" data-category="espresso" data-id="item-1" data-name="Velvet Haven Cortado" data-price="5.75">
+              <div>
+                <div class="flex items-start justify-between gap-space-sm mb-space-xs">
+                  <span class="px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase tracking-wider">House Favorite</span>
+                  <span class="font-headline-sm text-headline-sm text-primary font-medium">$5.75</span>
+                </div>
+                <h4 class="font-headline-sm text-headline-sm text-primary mb-space-xs group-hover:text-secondary transition-colors">Velvet Haven Cortado</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                  Double ristretto, silky textured organic oat milk, real infused Madagascar bourbon vanilla.
+                </p>
+              </div>
+              <div class="flex items-center justify-between pt-space-xs border-t border-surface-container-high">
+                <div class="flex items-center gap-space-xs text-outline">
+                  <span class="material-symbols-outlined text-[16px]">nature</span>
+                  <span class="font-label-sm text-label-sm">Ethiopia Guji &amp; Colombia Huila</span>
+                </div>
+                <button class="add-to-bag-btn px-3 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container transition-colors shadow-xs" data-id="item-1" data-name="Velvet Haven Cortado" data-price="5.75">
+                  Add
+                </button>
+              </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="menu-item p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between group shadow-sm hover:shadow-md cursor-pointer" data-category="cold" data-id="item-2" data-name="Smoked Maple Nitro Cold Brew" data-price="6.50">
+              <div>
+                <div class="flex items-start justify-between gap-space-sm mb-space-xs">
+                  <span class="px-space-sm py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm uppercase tracking-wider">Seasonal</span>
+                  <span class="font-headline-sm text-headline-sm text-primary font-medium">$6.50</span>
+                </div>
+                <h4 class="font-headline-sm text-headline-sm text-primary mb-space-xs group-hover:text-secondary transition-colors">Smoked Maple Nitro Cold Brew</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                  18-hour slow steep poured on nitrogen, organic Vermont wood-fired maple, delicate smoked sea salt rim.
+                </p>
+              </div>
+              <div class="flex items-center justify-between pt-space-xs border-t border-surface-container-high">
+                <div class="flex items-center gap-space-xs text-outline">
+                  <span class="material-symbols-outlined text-[16px]">local_fire_department</span>
+                  <span class="font-label-sm text-label-sm">Full Body • Ultra Creamy</span>
+                </div>
+                <button class="add-to-bag-btn px-3 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container transition-colors shadow-xs" data-id="item-2" data-name="Smoked Maple Nitro Cold Brew" data-price="6.50">
+                  Add
+                </button>
+              </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="menu-item p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between group shadow-sm hover:shadow-md cursor-pointer" data-category="pastry" data-id="item-3" data-name="Cardamom Pistachio Cruffin" data-price="5.25">
+              <div>
+                <div class="flex items-start justify-between gap-space-sm mb-space-xs">
+                  <span class="px-space-sm py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm uppercase tracking-wider">Fresh Baked</span>
+                  <span class="font-headline-sm text-headline-sm text-primary font-medium">$5.25</span>
+                </div>
+                <h4 class="font-headline-sm text-headline-sm text-primary mb-space-xs group-hover:text-secondary transition-colors">Cardamom Pistachio Cruffin</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                  Flaky laminated brioche dough filled with Sicilian pistachio pastry cream, dusted in aromatic cardamom sugar.
+                </p>
+              </div>
+              <div class="flex items-center justify-between pt-space-xs border-t border-surface-container-high">
+                <div class="flex items-center gap-space-xs text-outline">
+                  <span class="material-symbols-outlined text-[16px]">schedule</span>
+                  <span class="font-label-sm text-label-sm">Baked: 7:00 AM &amp; 1:00 PM</span>
+                </div>
+                <button class="add-to-bag-btn px-3 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container transition-colors shadow-xs" data-id="item-3" data-name="Cardamom Pistachio Cruffin" data-price="5.25">
+                  Add
+                </button>
+              </div>
+            </div>
+            <!-- Item 4 -->
+            <div class="menu-item p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between group shadow-sm hover:shadow-md cursor-pointer" data-category="cold" data-id="item-4" data-name="Kyoto Slow Drip Single Origin" data-price="7.00">
+              <div>
+                <div class="flex items-start justify-between gap-space-sm mb-space-xs">
+                  <span class="px-space-sm py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm uppercase tracking-wider">Limited Batch</span>
+                  <span class="font-headline-sm text-headline-sm text-primary font-medium">$7.00</span>
+                </div>
+                <h4 class="font-headline-sm text-headline-sm text-primary mb-space-xs group-hover:text-secondary transition-colors">Kyoto Slow Drip Single Origin</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                  Extracted drop-by-drop through glass towers over 12 hours. Expresses delicate jasmine blossom, bergamot, and peach.
+                </p>
+              </div>
+              <div class="flex items-center justify-between pt-space-xs border-t border-surface-container-high">
+                <div class="flex items-center gap-space-xs text-outline">
+                  <span class="material-symbols-outlined text-[16px]">filter_vintage</span>
+                  <span class="font-label-sm text-label-sm">Panama Geisha Lot #42</span>
+                </div>
+                <button class="add-to-bag-btn px-3 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container transition-colors shadow-xs" data-id="item-4" data-name="Kyoto Slow Drip Single Origin" data-price="7.00">
+                  Add
+                </button>
+              </div>
+            </div>
+            <!-- Item 5 -->
+            <div class="menu-item p-space-lg rounded-xl bg-surface-container-low hover:bg-surface-container transition-all flex flex-col justify-between group shadow-sm hover:shadow-md cursor-pointer" data-category="espresso" data-id="item-5" data-name="Golden Spiced Turmeric Latte" data-price="6.25">
+              <div>
+                <div class="flex items-start justify-between gap-space-sm mb-space-xs">
+                  <span class="px-space-sm py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-sm text-label-sm uppercase tracking-wider">Botanical</span>
+                  <span class="font-headline-sm text-headline-sm text-primary font-medium">$6.25</span>
+                </div>
+                <h4 class="font-headline-sm text-headline-sm text-primary mb-space-xs group-hover:text-secondary transition-colors">Golden Spiced Turmeric Latte</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+                  Freshly pressed Hawaiian golden turmeric, crushed ginger root, cracked pepper, micro-foamed house almond milk.
+                </p>
+              </div>
+              <div class="flex items-center justify-between pt-space-xs border-t border-surface-container-high">
+                <div class="flex items-center gap-space-xs text-outline">
+                  <span class="material-symbols-outlined text-[16px]">eco</span>
+                  <span class="font-label-sm text-label-sm">Caffeine-Free • Herbal</span>
+                </div>
+                <button class="add-to-bag-btn px-3 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm hover:bg-primary-container transition-colors shadow-xs" data-id="item-5" data-name="Golden Spiced Turmeric Latte" data-price="6.25">
+                  Add
+                </button>
+              </div>
+            </div>
+            <!-- Item 6: Reserve Bean Box Special -->
+            <div class="menu-item p-space-lg rounded-xl bg-primary-container text-on-primary flex flex-col justify-between shadow-md group cursor-pointer" data-category="espresso" data-id="item-6" data-name="Haven Signature Espresso Roast" data-price="22.00">
+              <div>
+                <div class="flex items-start justify-between gap-space-sm mb-space-xs">
+                  <span class="px-space-sm py-0.5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm uppercase tracking-wider">Whole Bean Tin</span>
+                  <span class="font-headline-sm text-headline-sm text-secondary-fixed font-medium">$22.00</span>
+                </div>
+                <h4 class="font-headline-sm text-headline-sm text-surface mb-space-xs">Haven Signature Espresso Roast</h4>
+                <p class="font-body-sm text-body-sm text-on-primary-container mb-space-md">
+                  Our flagship blend roasted for balance, dense crema, dark chocolate praline, and lingering sweet fig finish.
+                </p>
+              </div>
+              <div class="flex items-center justify-between pt-space-xs">
+                <span class="font-label-sm text-label-sm text-primary-fixed-dim">340g / 12 oz • Whole Bean</span>
+                <button class="add-to-bag-btn px-space-md py-1 rounded-full bg-surface text-primary font-label-md text-label-md hover:bg-surface-container transition-colors shadow-sm cursor-pointer" data-id="item-6" data-name="Haven Signature Espresso Roast" data-price="22.00">
+                  Add to Bag
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- The Story & Roastery Craftsmanship Process -->
+        <section class="w-full bg-surface-container py-space-xl" id="roasts">
+          <div class="max-w-7xl mx-auto px-gutter-sm lg:px-margin">
+            <div class="text-center max-w-2xl mx-auto mb-space-xl">
+              <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary">The Journey of Every Bean</span>
+              <h2 class="font-headline-lg text-headline-lg text-primary mt-space-xs">
+                From High-Altitude Farms <br>to Your Morning Cup
+              </h2>
+              <p class="font-body-md text-body-md text-on-surface-variant mt-space-sm">
+                We believe greatness in the cup begins with honoring the soil, safeguarding living wages for our partners, and roasting with rigorous scientific care.
+              </p>
+            </div>
+            <!-- 3-Step Process Bento -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+              <!-- Step 1 -->
+              <div class="p-space-xl rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+                <div class="absolute -right-4 -top-4 font-headline-xl text-surface-container-high/40 select-none pointer-events-none text-[96px] font-bold">01</div>
+                <div>
+                  <span class="w-10 h-10 rounded-full bg-secondary-container/60 text-on-secondary-container flex items-center justify-center font-label-lg text-label-lg mb-space-md font-bold">01</span>
+                  <h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Ethical Direct Sourcing</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    We travel annually to origin partners above 1,800m altitude in Ethiopia, Colombia, and Guatemala. Paying 60% above fair-trade thresholds ensures biodiversity preservation and generational craft.
+                  </p>
+                </div>
+                <div class="mt-space-lg pt-space-md flex items-center gap-space-xs text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+                  <span class="material-symbols-outlined text-[18px]">verified</span>
+                  <span>100% Traceable Single Origins</span>
+                </div>
+              </div>
+              <!-- Step 2 -->
+              <div class="p-space-xl rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+                <div class="absolute -right-4 -top-4 font-headline-xl text-surface-container-high/40 select-none pointer-events-none text-[96px] font-bold">02</div>
+                <div>
+                  <span class="w-10 h-10 rounded-full bg-secondary-container/60 text-on-secondary-container flex items-center justify-center font-label-lg text-label-lg mb-space-md font-bold">02</span>
+                  <h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Precision Drum Roasting</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Roasting inside our low-emission, convection-heated Loring drum roaster. Thermodynamic sensory curves allow delicate sugars to caramelize without scorching fragile volatile oils.
+                  </p>
+                </div>
+                <div class="mt-space-lg pt-space-md flex items-center gap-space-xs text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+                  <span class="material-symbols-outlined text-[18px]">thermostat</span>
+                  <span>Cupped Weekly for Quality</span>
+                </div>
+              </div>
+              <!-- Step 3 -->
+              <div class="p-space-xl rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+                <div class="absolute -right-4 -top-4 font-headline-xl text-surface-container-high/40 select-none pointer-events-none text-[96px] font-bold">03</div>
+                <div>
+                  <span class="w-10 h-10 rounded-full bg-secondary-container/60 text-on-secondary-container flex items-center justify-center font-label-lg text-label-lg mb-space-md font-bold">03</span>
+                  <h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">The Master Pour</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Reverse-osmosis water remineralized with tailored magnesium and calcium balances. Served by SCA-certified baristas dedicated to hospitality and mindful extraction.
+                  </p>
+                </div>
+                <div class="mt-space-lg pt-space-md flex items-center gap-space-xs text-secondary font-label-sm text-label-sm uppercase tracking-wider">
+                  <span class="material-symbols-outlined text-[18px]">water</span>
+                  <span>Balanced Mineral Chemistry</span>
+                </div>
+              </div>
+            </div>
+            <!-- Quote Banner with Logo Accent -->
+            <div class="mt-space-xl p-space-lg lg:p-space-xl rounded-xl bg-surface-container-lowest shadow-sm flex flex-col md:flex-row items-center justify-between gap-space-lg">
+              <div class="flex items-center gap-space-md">
+                <div class="w-14 h-14 rounded-lg bg-surface-container-low flex items-center justify-center text-primary text-2xl">☕</div>
+                <div>
+                  <span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Roastery Commitment</span>
+                  <h4 class="font-headline-sm text-headline-sm text-primary">Every batch is roasted within 7 days of service.</h4>
+                </div>
+              </div>
+              <a class="nav-item inline-flex items-center gap-space-xs px-space-lg py-space-sm rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm cursor-pointer" href="#locations">
+                <span>Visit the Roastery Atelier</span>
+                <span class="material-symbols-outlined text-[18px]">storefront</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Ambiance & Locations Section -->
+        <section class="max-w-7xl mx-auto px-gutter-sm lg:px-margin py-space-xl" id="locations">
+          <div class="mb-space-lg">
+            <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary">Sanctuaries of Calm</span>
+            <h2 class="font-headline-lg text-headline-lg text-primary mt-space-xs">Visit Our Spaces</h2>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-xl mt-space-xs">
+              Designed with warm timber, tactile stone, and acoustic softness to provide an unhurried escape from the city.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+            <!-- Location 1: Flagship Atelier -->
+            <div class="rounded-xl overflow-hidden bg-surface-container-low shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+              <div class="w-full h-64 sm:h-72 relative overflow-hidden bg-surface-container">
+                <img
+                  src="assets/location_flagship.jpg"
+                  alt="Flagship Atelier &amp; Lounge"
+                  class="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-black/10 pointer-events-none"></div>
+                <div class="absolute top-space-md left-space-md px-space-md py-space-xs rounded-full bg-surface-container-lowest/90 backdrop-blur-md font-label-sm text-label-sm text-primary shadow-sm">
+                  Flagship Atelier &amp; Lounge
+                </div>
+              </div>
+              <div class="p-space-lg flex flex-col gap-space-md">
+                <div class="flex flex-col">
+                  <h3 class="font-headline-sm text-headline-sm text-primary">Downtown Timber District</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">482 Artisan Way, Portland, OR 97209</p>
+                </div>
+                <div class="grid grid-cols-2 gap-space-sm text-on-surface-variant font-body-sm text-body-sm bg-surface-container-lowest p-space-md rounded-lg">
+                  <div>
+                    <span class="font-label-sm text-label-sm uppercase text-secondary block">Weekdays</span>
+                    <span class="text-primary font-medium">6:30 AM – 7:00 PM</span>
+                  </div>
+                  <div>
+                    <span class="font-label-sm text-label-sm uppercase text-secondary block">Weekends</span>
+                    <span class="text-primary font-medium">7:30 AM – 8:00 PM</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-space-sm pt-space-xs">
+                  <button data-action="reserve-table" data-location="Downtown Timber District" class="flex-1 px-space-md py-space-xs rounded-full bg-primary text-on-primary font-label-md text-label-md text-center hover:bg-primary-container transition-colors cursor-pointer">
+                    Reserve a Table
+                  </button>
+                  <a href="https://www.google.com/maps/dir/?api=1&destination=482+Artisan+Way,+Portland,+OR+97209" target="_blank" rel="noopener noreferrer" class="px-space-md py-space-xs rounded-full bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md transition-colors flex items-center gap-1 cursor-pointer">
+                    <span class="material-symbols-outlined text-[16px]">navigation</span>
+                    <span>Directions</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Location 2: Riverside Roastery -->
+            <div class="rounded-xl overflow-hidden bg-surface-container-low shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+              <div class="w-full h-64 sm:h-72 relative overflow-hidden bg-surface-container">
+                <img
+                  src="assets/location_roastery.jpg"
+                  alt="Roastery &amp; Cupping Lab"
+                  class="w-full h-full object-cover object-[center_45%] transition-transform duration-700 ease-out group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-black/10 pointer-events-none"></div>
+                <div class="absolute top-space-md left-space-md px-space-md py-space-xs rounded-full bg-surface-container-lowest/90 backdrop-blur-md font-label-sm text-label-sm text-primary shadow-sm">
+                  Roastery &amp; Cupping Lab
+                </div>
+              </div>
+              <div class="p-space-lg flex flex-col gap-space-md">
+                <div class="flex flex-col">
+                  <h3 class="font-headline-sm text-headline-sm text-primary">Riverside Waterfront</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">104 Waterfront Promenade, Portland, OR 97201</p>
+                </div>
+                <div class="grid grid-cols-2 gap-space-sm text-on-surface-variant font-body-sm text-body-sm bg-surface-container-lowest p-space-md rounded-lg">
+                  <div>
+                    <span class="font-label-sm text-label-sm uppercase text-secondary block">Mon – Fri</span>
+                    <span class="text-primary font-medium">7:00 AM – 6:00 PM</span>
+                  </div>
+                  <div>
+                    <span class="font-label-sm text-label-sm uppercase text-secondary block">Sat – Sun</span>
+                    <span class="text-primary font-medium">8:00 AM – 6:00 PM</span>
+                  </div>
+                </div>
+                <div class="flex items-center gap-space-sm pt-space-xs">
+                  <button data-action="book-cupping" data-location="Riverside Waterfront" class="flex-1 px-space-md py-space-xs rounded-full bg-primary text-on-primary font-label-md text-label-md text-center hover:bg-primary-container transition-colors cursor-pointer">
+                    Public Cupping Session
+                  </button>
+                  <a href="https://www.google.com/maps/dir/?api=1&destination=104+Waterfront+Promenade,+Portland,+OR+97201" target="_blank" rel="noopener noreferrer" class="px-space-md py-space-xs rounded-full bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md transition-colors flex items-center gap-1 cursor-pointer">
+                    <span class="material-symbols-outlined text-[16px]">navigation</span>
+                    <span>Directions</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Community & Critical Reviews -->
+        <section class="w-full bg-surface-container-low py-space-xl" id="reviews">
+          <div class="max-w-7xl mx-auto px-gutter-sm lg:px-margin">
+            <div class="text-center max-w-xl mx-auto mb-space-xl">
+              <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary">Critical Acclaim</span>
+              <h2 class="font-headline-lg text-headline-lg text-primary mt-space-xs">Words from our Guests</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+              <!-- Review 1 -->
+              <div class="p-space-xl rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+                <div class="flex flex-col gap-space-sm">
+                  <div class="flex items-center gap-0.5 text-tertiary">
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  </div>
+                  <p class="font-body-md text-body-md text-on-surface italic">
+                    “The most refined espresso pull in the city. Brew Haven treats coffee as an art form without an ounce of pretension.”
+                  </p>
+                </div>
+                <div class="pt-space-md mt-space-md">
+                  <span class="font-title-md text-title-md text-primary block">Specialty Coffee Guide</span>
+                  <span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Independent Review</span>
+                </div>
+              </div>
+              <!-- Review 2 -->
+              <div class="p-space-xl rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+                <div class="flex flex-col gap-space-sm">
+                  <div class="flex items-center gap-0.5 text-tertiary">
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  </div>
+                  <p class="font-body-md text-body-md text-on-surface italic">
+                    “My morning ritual is incomplete without their cortado and pistachio cruffin. The acoustic stillness makes it my favorite creative haven.”
+                  </p>
+                </div>
+                <div class="pt-space-md mt-space-md">
+                  <span class="font-title-md text-title-md text-primary block">Julian M.</span>
+                  <span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Architect &amp; Daily Patron</span>
+                </div>
+              </div>
+              <!-- Review 3 -->
+              <div class="p-space-xl rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+                <div class="flex flex-col gap-space-sm">
+                  <div class="flex items-center gap-0.5 text-tertiary">
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                  </div>
+                  <p class="font-body-md text-body-md text-on-surface italic">
+                    “Unmatched consistency, incredible bean selection, and baristas who genuinely care about the craft and story behind each harvest.”
+                  </p>
+                </div>
+                <div class="pt-space-md mt-space-md">
+                  <span class="font-title-md text-title-md text-primary block">Sofia R.</span>
+                  <span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider">Culinary &amp; Food Writer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Warm Atmospheric Call to Action / Subscription -->
+        <section class="max-w-7xl mx-auto px-gutter-sm lg:px-margin py-space-xl" id="subscription">
+          <div class="relative rounded-xl overflow-hidden bg-primary-container text-on-primary p-space-xl lg:p-space-xl shadow-xl">
+            <div class="max-w-2xl relative z-10 flex flex-col gap-space-md">
+              <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-fixed">Take the Ritual Home</span>
+              <h2 class="font-headline-lg text-headline-lg text-surface">
+                Subscribe to our Rare Harvest Coffee Club
+              </h2>
+              <p class="font-body-lg text-body-lg text-primary-fixed-dim">
+                Receive freshly roasted micro-lots delivered to your door within 48 hours of roaster release. Complementary tasting cards and brew guides included.
+              </p>
+              <div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+                <button data-action="start-subscription" class="px-space-xl py-space-sm rounded-full bg-secondary-container text-on-secondary-container font-label-lg text-label-lg hover:bg-secondary-fixed transition-colors shadow-md cursor-pointer font-semibold">
+                  Start Subscription (From $18/mo)
+                </button>
+                <a class="nav-item px-space-lg py-space-sm rounded-full bg-surface-container-low/20 text-surface hover:bg-surface-container-low/30 font-label-lg text-label-lg transition-colors cursor-pointer" href="#menu">
+                  Explore Single Bags
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer from Provided File -->
+  <footer class="w-full bg-surface-container-low text-on-surface pt-space-xl pb-space-lg relative z-10">
+    <div class="max-w-7xl mx-auto px-gutter-sm lg:px-margin">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-space-xl pb-space-xl">
+        <div class="lg:col-span-4 flex flex-col gap-space-md">
+          <a href="#hero" class="nav-brand flex items-center gap-space-sm text-decoration-none group">
+            <span class="text-2xl">☕</span>
+            <span class="font-headline-sm text-headline-sm tracking-tight text-primary group-hover:text-secondary transition-colors">Brew Haven</span>
+          </a>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
+            Dedicated to the ritual of specialty extraction, direct-trade sourcing, and small-batch roasting in harmony with origin communities worldwide.
+          </p>
+          <div class="flex items-center gap-space-sm">
+            <span class="px-space-sm py-space-xs rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm uppercase tracking-wider">SCA Certified</span>
+            <span class="px-space-sm py-space-xs rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm uppercase tracking-wider">Organic Certified</span>
+            <span class="px-space-sm py-space-xs rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm uppercase tracking-wider">Direct Origin</span>
+          </div>
+        </div>
+        <div class="lg:col-span-3 flex flex-col gap-space-sm">
+          <h3 class="font-title-md text-title-md text-primary mb-space-xs">Café &amp; Tasting Lounge</h3>
+          <div class="flex flex-col gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+            <p class="font-label-md text-label-md text-on-surface">Roastery Atelier</p>
+            <p>482 Artisan Way, Timber District</p>
+            <p>Portland, OR 97209</p>
+            <p class="mt-space-sm font-label-md text-label-md text-on-surface">Hours of Service</p>
+            <p>Monday – Friday: 6:30 AM – 6:00 PM</p>
+            <p>Saturday – Sunday: 7:30 AM – 7:00 PM</p>
+            <p class="mt-space-xs">Roastery Cupping: Thursdays at 10:00 AM</p>
+          </div>
+        </div>
+        <div class="lg:col-span-2 flex flex-col gap-space-sm">
+          <h3 class="font-title-md text-title-md text-primary mb-space-xs">Navigation</h3>
+          <ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+            <li><a class="nav-item hover:text-primary transition-colors cursor-pointer" href="#menu">Our Coffee</a></li>
+            <li><a class="nav-item hover:text-primary transition-colors cursor-pointer" href="#menu">Seasonal Menu</a></li>
+            <li><a class="nav-item hover:text-primary transition-colors cursor-pointer" href="#roasts">Origins &amp; Process</a></li>
+            <li><a class="nav-item hover:text-primary transition-colors cursor-pointer" href="#roasts">Philosophy &amp; Story</a></li>
+            <li><a class="nav-item hover:text-primary transition-colors cursor-pointer" href="#locations">Locations &amp; Hours</a></li>
+            <li><a class="hover:text-primary transition-colors cursor-pointer" data-action="reserve-table" href="#locations">Reservations</a></li>
+            <li><a class="nav-item hover:text-primary transition-colors cursor-pointer" href="#footer-newsletter-form">Fresh Bean Drops</a></li>
+            <li><button data-modal="privacy" class="text-left hover:text-primary transition-colors cursor-pointer">Privacy Policy</button></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-3 flex flex-col gap-space-md">
+          <h3 class="font-title-md text-title-md text-primary">Fresh Bean Drops</h3>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">
+            Subscribe for micro-lot announcements, seasonal single origins, and brew guides from our lead roasters.
+          </p>
+          <form id="footer-newsletter-form" class="flex flex-col gap-space-xs">
+            <div class="flex items-center gap-space-xs bg-surface-container-lowest p-space-xs rounded-full shadow-[0_1px_4px_rgba(56,34,24,0.06)] border border-[#dfd2c0]">
+              <input class="w-full bg-transparent px-space-md py-space-xs font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none" placeholder="Your email address" type="email" required>
+              <button class="px-space-md py-space-xs rounded-full bg-primary-container hover:bg-primary text-on-primary font-label-md text-label-md transition-colors cursor-pointer" type="submit">Join</button>
+            </div>
+            <span class="font-label-sm text-label-sm text-outline px-space-sm">Zero spam. Only rare harvests and roast release dates.</span>
+          </form>
+        </div>
+      </div>
+      <div class="pt-space-lg flex flex-col sm:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-on-surface-variant border-t border-[#dfd2c0]/60">
+        <p>© 2026 Brew Haven Roasters Inc. All rights reserved.</p>
+        <div class="flex items-center gap-space-lg">
+          <button data-modal="privacy" class="hover:text-primary transition-colors cursor-pointer">Privacy Policy</button>
+          <button data-modal="terms" class="hover:text-primary transition-colors cursor-pointer">Terms of Sourcing</button>
+          <button data-modal="accessibility" class="hover:text-primary transition-colors cursor-pointer">Accessibility</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODALS & DRAWERS (Cart, Search, Reservation, Cupping, Subscription, Policy)
+       ========================================================================== -->
+
+  <!-- Cart Drawer -->
+  <div id="cart-drawer-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden transition-opacity duration-300"></div>
+  <div id="cart-drawer" class="fixed top-0 right-0 w-full max-w-md h-full bg-[#fcf9f3] z-50 shadow-2xl p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out">
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-[#e5e2dc]">
+        <div class="flex items-center gap-2">
+          <span class="text-xl">🛍️</span>
+          <h3 class="font-headline-sm text-2xl text-primary font-bold">Your Bag</h3>
+        </div>
+        <button id="cart-close-btn" class="p-2 rounded-full hover:bg-surface-container text-primary cursor-pointer" aria-label="Close cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Cart Items Container -->
+      <div id="cart-items-list" class="py-4 flex flex-col gap-3 max-h-[60vh] overflow-y-auto">
+        <!-- Dynamically rendered or empty state -->
+        <div id="cart-empty-state" class="py-12 text-center text-on-surface-variant">
+          <span class="material-symbols-outlined text-[48px] text-outline opacity-40 mb-2">local_cafe</span>
+          <p class="font-body-md">Your coffee bag is currently empty.</p>
+          <a href="#menu" id="cart-browse-btn" class="inline-block mt-4 px-5 py-2 rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors">
+            Browse Offerings
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cart Summary & Checkout -->
+    <div class="border-t border-[#e5e2dc] pt-4 flex flex-col gap-3">
+      <div class="flex items-center justify-between font-headline-sm text-lg text-primary font-semibold">
+        <span>Subtotal</span>
+        <span id="cart-subtotal">$0.00</span>
+      </div>
+      <p class="text-xs text-on-surface-variant">Taxes &amp; shipping calculated at checkout.</p>
+      <button id="checkout-btn" class="w-full py-3 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg font-bold hover:bg-primary transition-all shadow-md cursor-pointer flex items-center justify-center gap-2">
+        <span>Proceed to Checkout</span>
+        <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Search Modal -->
+  <div id="search-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-start justify-center pt-24 px-4 transition-opacity duration-300">
+    <div class="bg-[#fcf9f3] w-full max-w-xl rounded-2xl shadow-2xl p-6 border border-[#e5e2dc]">
+      <div class="flex items-center justify-between pb-3 border-b border-[#e5e2dc]">
+        <h3 class="font-headline-sm text-xl text-primary font-bold">Search Menu &amp; Offerings</h3>
+        <button id="search-close-btn" class="p-1.5 rounded-full hover:bg-surface-container text-primary cursor-pointer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="mt-4 relative">
+        <input id="search-input" type="text" placeholder="Search drinks, beans, roasts, cruffin..." class="w-full px-4 py-3 pl-11 rounded-xl bg-surface-container text-primary placeholder:text-outline border border-[#dfd2c0] focus:outline-none focus:border-secondary">
+        <span class="material-symbols-outlined absolute left-3.5 top-3.5 text-[20px] text-outline">search</span>
+      </div>
+      <div id="search-results" class="mt-4 max-h-60 overflow-y-auto flex flex-col gap-2">
+        <p class="text-xs text-on-surface-variant p-2">Type to filter seasonal drinks, espresso, cold brews, or bakery offerings.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reservation Modal -->
+  <div id="reservation-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 transition-opacity duration-300">
+    <div class="bg-[#fcf9f3] w-full max-w-lg rounded-2xl shadow-2xl p-6 border border-[#e5e2dc] max-h-[90vh] overflow-y-auto">
+      <div class="flex items-center justify-between pb-3 border-b border-[#e5e2dc]">
+        <div>
+          <span class="font-label-sm text-secondary uppercase tracking-widest text-xs">Table Booking</span>
+          <h3 class="font-headline-sm text-2xl text-primary font-bold">Reserve a Table</h3>
+        </div>
+        <button id="reservation-close-btn" class="p-1.5 rounded-full hover:bg-surface-container text-primary cursor-pointer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <form id="reservation-form" class="mt-4 flex flex-col gap-3.5">
+        <div>
+          <label class="block text-xs font-bold text-primary uppercase tracking-wider mb-1">Select Location</label>
+          <select id="res-location" class="w-full px-3.5 py-2.5 rounded-lg bg-surface-container border border-[#dfd2c0] text-sm text-primary focus:outline-none focus:border-secondary">
+            <option value="Downtown Timber District">Downtown Timber District — 482 Artisan Way</option>
+            <option value="Riverside Waterfront">Riverside Waterfront — 104 Waterfront Promenade</option>
+          </select>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-primary uppercase tracking-wider mb-1">Date</label>
+            <input id="res-date" type="date" required class="w-full px-3.5 py-2 rounded-lg bg-surface-container border border-[#dfd2c0] text-sm text-primary focus:outline-none focus:border-secondary">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-primary uppercase tracking-wider mb-1">Time</label>
+            <select id="res-time" class="w-full px-3.5 py-2 rounded-lg bg-surface-container border border-[#dfd2c0] text-sm text-primary focus:outline-none focus:border-secondary">
+              <option>8:00 AM</option>
+              <option>9:30 AM</option>
+              <option>11:00 AM</option>
+              <option>1:00 PM</option>
+              <option>3:00 PM</option>
+              <option>5:00 PM</option>
+            </select>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-primary uppercase tracking-wider mb-1">Guests</label>
+            <select id="res-guests" class="w-full px-3.5 py-2 rounded-lg bg-surface-container border border-[#dfd2c0] text-sm text-primary focus:outline-none focus:border-secondary">
+              <option>1 Guest</option>
+              <option selected>2 Guests</option>
+              <option>3 Guests</option>
+              <option>4 Guests</option>
+              <option>5+ Guests</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-primary uppercase tracking-wider mb-1">Seating Area</label>
+            <select id="res-area" class="w-full px-3.5 py-2 rounded-lg bg-surface-container border border-[#dfd2c0] text-sm text-primary focus:outline-none focus:border-secondary">
+              <option>Main Tasting Lounge</option>
+              <option>Acoustic Quiet Corner</option>
+              <option>Timber Sunlit Patio</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-primary uppercase tracking-wider mb-1">Your Name</label>
+          <input id="res-name" type="text" placeholder="Full name" required class="w-full px-3.5 py-2 rounded-lg bg-surface-container border border-[#dfd2c0] text-sm text-primary focus:outline-none focus:border-secondary">
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-primary uppercase tracking-wider mb-1">Contact Email or Phone</label>
+          <input id="res-contact" type="text" placeholder="Email or mobile number" required class="w-full px-3.5 py-2 rounded-lg bg-surface-container border border-[#dfd2c0] text-sm text-primary focus:outline-none focus:border-secondary">
+        </div>
+        <button type="submit" class="w-full mt-2 py-3 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold hover:bg-primary-container transition-colors shadow-md cursor-pointer">
+          Confirm Reservation
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Cupping Session Modal -->
+  <div id="cupping-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 transition-opacity duration-300">
+    <div class="bg-[#fcf9f3] w-full max-w-lg rounded-2xl shadow-2xl p-6 border border-[#e5e2dc]">
+      <div class="flex items-center justify-between pb-3 border-b border-[#e5e2dc]">
+        <div>
+          <span class="font-label-sm text-secondary uppercase tracking-widest text-xs">Roastery Lab</span>
+          <h3 class="font-headline-sm text-2xl text-primary font-bold">Public Cupping Session</h3>
+        </div>
+        <button id="cupping-close-btn" class="p-1.5 rounded-full hover:bg-surface-container text-primary cursor-pointer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="mt-4 flex flex-col gap-3 text-sm text-on-surface-variant">
+        <p>Join our Head Roaster every <strong>Thursday at 10:00 AM</strong> at the Riverside Cupping Lab for an interactive sensory evaluation of our newest micro-lot harvests.</p>
+        <div class="p-3 bg-surface-container rounded-xl flex items-center gap-3">
+          <span class="text-2xl">☕</span>
+          <div>
+            <span class="font-semibold text-primary block">Upcoming: Panama Geisha &amp; Guji Washed</span>
+            <span class="text-xs text-secondary">Free admission • Limited to 12 participants</span>
+          </div>
+        </div>
+        <form id="cupping-form" class="mt-2 flex flex-col gap-3">
+          <input id="cupping-name" type="text" placeholder="Your full name" required class="w-full px-3.5 py-2 rounded-lg bg-surface-container border border-[#dfd2c0] text-sm text-primary focus:outline-none focus:border-secondary">
+          <input id="cupping-email" type="email" placeholder="Your email address" required class="w-full px-3.5 py-2 rounded-lg bg-surface-container border border-[#dfd2c0] text-sm text-primary focus:outline-none focus:border-secondary">
+          <button type="submit" class="w-full py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold hover:bg-primary-container transition-colors shadow-md cursor-pointer">
+            Reserve Spot for This Thursday
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Subscription Modal -->
+  <div id="subscription-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 transition-opacity duration-300">
+    <div class="bg-[#fcf9f3] w-full max-w-lg rounded-2xl shadow-2xl p-6 border border-[#e5e2dc]">
+      <div class="flex items-center justify-between pb-3 border-b border-[#e5e2dc]">
+        <div>
+          <span class="font-label-sm text-secondary uppercase tracking-widest text-xs">Rare Harvest Club</span>
+          <h3 class="font-headline-sm text-2xl text-primary font-bold">Start Your Subscription</h3>
+        </div>
+        <button id="sub-close-btn" class="p-1.5 rounded-full hover:bg-surface-container text-primary cursor-pointer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <form id="sub-form" class="mt-4 flex flex-col gap-3 text-sm">
+        <div>
+          <label class="block text-xs font-bold text-primary uppercase tracking-wider mb-1">Roast Preference</label>
+          <select id="sub-roast" class="w-full px-3.5 py-2 rounded-lg bg-surface-container border border-[#dfd2c0] text-primary focus:outline-none focus:border-secondary">
+            <option>Roaster's Choice (Rotating Single Origin Micro-lots)</option>
+            <option>Haven Signature Espresso (Rich &amp; Chocolatey)</option>
+            <option>Highland Filter Blend (Floral &amp; Citrus)</option>
+          </select>
+        </div>
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-bold text-primary uppercase tracking-wider mb-1">Grind</label>
+            <select id="sub-grind" class="w-full px-3.5 py-2 rounded-lg bg-surface-container border border-[#dfd2c0] text-primary focus:outline-none focus:border-secondary">
+              <option>Whole Bean (Recommended)</option>
+              <option>Espresso / Moka</option>
+              <option>Pour Over / Chemex</option>
+              <option>French Press / Cold Brew</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-primary uppercase tracking-wider mb-1">Frequency</label>
+            <select id="sub-freq" class="w-full px-3.5 py-2 rounded-lg bg-surface-container border border-[#dfd2c0] text-primary focus:outline-none focus:border-secondary">
+              <option>Every 2 Weeks ($18 / shipment)</option>
+              <option>Monthly ($20 / shipment)</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <label class="block text-xs font-bold text-primary uppercase tracking-wider mb-1">Email for Delivery Updates</label>
+          <input id="sub-email" type="email" placeholder="your@email.com" required class="w-full px-3.5 py-2 rounded-lg bg-surface-container border border-[#dfd2c0] text-primary focus:outline-none focus:border-secondary">
+        </div>
+        <div class="p-3 bg-secondary-container/40 rounded-xl text-xs text-on-secondary-container">
+          ✦ Roasted within 48 hours of dispatch. Skip, pause, or cancel anytime with zero commitments.
+        </div>
+        <button type="submit" class="w-full mt-1 py-3 rounded-full bg-primary-container text-on-primary font-label-md text-label-md font-bold hover:bg-primary transition-colors shadow-md cursor-pointer">
+          Activate Subscription ($18/mo)
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Policy / Info Modal -->
+  <div id="info-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 transition-opacity duration-300">
+    <div class="bg-[#fcf9f3] w-full max-w-lg rounded-2xl shadow-2xl p-6 border border-[#e5e2dc] max-h-[85vh] overflow-y-auto">
+      <div class="flex items-center justify-between pb-3 border-b border-[#e5e2dc]">
+        <h3 id="info-modal-title" class="font-headline-sm text-2xl text-primary font-bold">Policy Information</h3>
+        <button id="info-close-btn" class="p-1.5 rounded-full hover:bg-surface-container text-primary cursor-pointer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div id="info-modal-body" class="mt-4 text-sm text-on-surface-variant leading-relaxed flex flex-col gap-3">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>

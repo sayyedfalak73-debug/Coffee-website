@@ -1,0 +1,122 @@
+/* Canvas Pin & Loader Styling */
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  main > :first-child {
+    margin-top: 0 !important;
+  }
+  main > :last-child {
+    margin-bottom: 0 !important;
+  }
+}
+
+/* Minimalist Dissolving Preloader */
+.loader-overlay {
+  position: fixed;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  pointer-events: none;
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  background: rgba(15, 12, 10, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 0.6rem 1.4rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(212, 151, 94, 0.25);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+.loader-overlay.hidden {
+  opacity: 0;
+  transform: translate(-50%, 15px);
+  visibility: hidden;
+}
+
+.loader-bar-track {
+  width: 120px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.loader-bar {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #d4975e, #f0dfcc);
+  border-radius: 999px;
+  transition: width 0.15s ease-out;
+  box-shadow: 0 0 8px rgba(212, 151, 94, 0.7);
+}
+
+.loader-text {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f0dfcc;
+  font-weight: 500;
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0eee8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7a582f;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #382218;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Modal and Drawer Transitions */
+.drawer-active {
+  transform: translateX(0) !important;
+}
+
+.modal-active {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* Toast Notifications */
+.toast-msg {
+  animation: toast-slide-in 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.toast-msg.dismissing {
+  opacity: 0;
+  transform: translateY(12px) scale(0.95);
+}
+
+@keyframes toast-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
